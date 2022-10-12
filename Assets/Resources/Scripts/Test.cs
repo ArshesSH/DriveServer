@@ -16,11 +16,7 @@ public class Test : MonoBehaviour
 	/*--- MonoBehaviour Callbacks ---*/
 	void Start()
 	{
-		SheetDBMS.Instance.PrintSheet( "Sheet1!A1	" );
-	}
-	void Update()
-	{
-		
+		SheetDBMS.Instance.PrintSheet( "TestSheet!A1:D4" );
 	}
 
 

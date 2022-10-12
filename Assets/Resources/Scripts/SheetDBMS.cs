@@ -113,7 +113,12 @@ public class SheetDBMS : MonoBehaviour
 
 	public void PrintSheet( string sheetNameAndRange )
 	{
-		var request = service.Spreadsheets.Values.Get( spreadsheetId, "Sheet1" );
+		if(service != null)
+        {
+			Debug.LogError( "No Service set" );
+			return;
+        }
+		var request = service.Spreadsheets.Values.Get( spreadsheetId, sheetNameAndRange );
 		ValueRange response = request.Execute();
 		IList<IList<object>> values = response.Values;
 		if ( values != null && values.Count > 0 )
