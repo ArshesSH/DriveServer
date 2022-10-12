@@ -33,11 +33,6 @@ public class DriveTest : MonoBehaviour
 	{
 		StartCoroutine(GetData(jsonURL));
 	}
-	void Update()
-	{
-		
-	}
-
 
 	/*--- Public Methods ---*/
 
