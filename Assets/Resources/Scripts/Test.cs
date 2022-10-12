@@ -12,12 +12,11 @@ public class Test : MonoBehaviour
 
 
 	/*--- Private Fields ---*/
-	SheetReader sheetReader;
 
 	/*--- MonoBehaviour Callbacks ---*/
 	void Start()
 	{
-		sheetReader.getSheetRange( "Sheet1" );
+		SheetDBMS.Instance.PrintSheet( "Sheet1!A1	" );
 	}
 	void Update()
 	{
